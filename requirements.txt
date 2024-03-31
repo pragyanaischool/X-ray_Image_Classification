@@ -10,6 +10,7 @@ imageio
 tensorflow
 plotly
 scikit-learn
+opencv-python-headless
 Pillow
 streamlit-image-select
 torch
