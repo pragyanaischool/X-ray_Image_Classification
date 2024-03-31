@@ -6,12 +6,10 @@ import numpy as np
 
 #Title
 st.title("Image Classification")
-
 #load model, set cache to prevent reloading
 
-
-
 uploaded_file = st.file_uploader("Choose a file")
+st.write(uploaded_file)
 @st.cache(allow_output_mutation=True)
 def load_model(model_weights):
     model=tf.keras.models.load_model(model_weights)
