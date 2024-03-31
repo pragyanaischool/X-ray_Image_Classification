@@ -12,3 +12,5 @@ plotly
 scikit-learn
 Pillow
 streamlit-image-select
+torch
+torchvision
