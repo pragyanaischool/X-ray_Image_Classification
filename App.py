@@ -9,13 +9,13 @@ st.title("Image Classification")
 
 #load model, set cache to prevent reloading
 @st.cache(allow_output_mutation=True)
-def load_model():
-    uploaded_file = st.file_uploader("Choose a file")
-    model=tf.keras.models.load_model(uploaded_file)
+def load_model(model_weights):
+    model=tf.keras.models.load_model(model_weights)
     return model
 
 with st.spinner("Loading Model...."):
-    model=load_model()
+    uploaded_file = st.file_uploader("Choose a file")
+    model=load_model(uploaded_file)
     
 #classes for CIFAR-10 dataset
 classes=["airplane","automobile","bird","cat","deer","dog","frog","horse","ship","truck"]
